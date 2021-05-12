@@ -1,0 +1,250 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* For multiple columns */
+[class*='col-'] {
+	float: left;
+}
+
+.col-1 {
+	width: 8.33%;
+}
+.col-2 {
+	width: 16.66%;
+}
+.col-3 {
+	width: 25%;
+}
+.col-4 {
+	width: 33.33%;
+}
+.col-5 {
+	width: 41.66%;
+}
+.col-6 {
+	width: 50%;
+}
+.col-7 {
+	width: 58.33%;
+}
+.col-8 {
+	width: 66.66%;
+}
+.col-9 {
+	width: 75%;
+}
+.col-10 {
+	width: 83.33%;
+}
+.col-11 {
+	width: 91.66%;
+}
+.col-12 {
+	width: 100%;
+}
+
+/* Clear floats after the columns */
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+.nav {
+	background-color: black;
+	list-style-type: none;
+	display: flex;
+}
+.nav > li {
+	margin: 1rem 2rem;
+	align-items: center;
+}
+.nav > li > a {
+	text-decoration: none;
+	color: rgb(195, 195, 195);
+}
+.nav > li > a:hover {
+	text-decoration: none;
+	color: white;
+}
+.nav > li > h1 {
+	color: white;
+	font-size: 1.5rem;
+}
+
+.main {
+	/* margin: 1rem; */
+	border: 1px solid black;
+	background-image: url(./images/background.jpg);
+	/* background-repeat: no-repeat; */
+	background-size: cover;
+	padding-top: 1.5rem;
+	margin-bottom: 6rem;
+}
+
+.container {
+	margin: 8rem auto;
+	width: 75%;
+	padding: 1rem;
+	display: flex;
+}
+
+.info {
+	flex-basis: 40%;
+	text-align: center;
+	margin-top: 2rem;
+}
+.info > img {
+	width: 10rem;
+	height: 10rem;
+}
+.info > h3 {
+	font-size: 2rem;
+	color: white;
+}
+.info > p {
+	color: white;
+	font-size: 1rem;
+	letter-spacing: 1px;
+}
+.descreption {
+	flex-basis: 60%;
+	border-left: 3px solid white;
+	padding: 2rem 4rem;
+	text-align: center;
+	letter-spacing: 2px;
+	color: white;
+	font-size: 1.5rem;
+}
+
+.sk-head {
+	text-align: center;
+}
+.sk-head > span {
+	font-size: 3rem;
+	border-bottom: 2px solid black;
+}
+
+.sk-main {
+	display: grid;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1rem;
+}
+.sk-main > img {
+	width: 8rem;
+	height: 8rem;
+	margin: 0 auto;
+}
+
+#projects {
+	/* background-color: rgb(185, 185, 185); */
+	background-image: url(./images/pro-back.png);
+	background-size: cover;
+	padding: 2rem;
+}
+.pro-head {
+	text-align: center;
+	margin: 4rem;
+}
+.pro-head > span {
+	font-size: 3rem;
+	color: white;
+	/* text-align: center; */
+	border-bottom: 2px solid white;
+}
+
+.pro-main {
+	padding: 2rem;
+	margin-bottom: 4rem;
+}
+#footer {
+	background-color: rgb(39, 36, 36);
+	text-align: center;
+	padding-top: 2rem;
+}
+#footer h3 {
+	color: white;
+}
+#footer p {
+	color: rgb(143, 142, 142);
+	position: relative;
+	bottom: 2rem;
+}
+.icon {
+	color: white;
+	border-radius: 100%;
+	margin: 1rem 1rem 3rem 1rem;
+}
+
+@media only screen and (max-width: 440px) {
+	.sk-main > img {
+		width: 4rem;
+		height: 4rem;
+		margin: 0 auto;
+	}
+}
+@media only screen and (max-width: 640px) {
+	.sk-main {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.sk-main > img {
+		width: 5rem;
+		height: 5rem;
+		margin: 0 auto;
+	}
+	.descreption {
+		font-size: 1rem;
+	}
+}
+@media only screen and (max-width: 770px) {
+	.container {
+		flex-direction: column;
+		margin: 4rem auto;
+	}
+	.descreption {
+		border-top: 3px solid white;
+		border-left: none;
+	}
+}
+@media only screen and (max-width: 940px) {
+	.container {
+		width: 90%;
+	}
+	.pro-main {
+		padding: 0;
+	}
+	.descreption {
+		padding: 2rem 2rem;
+	}
+	#projects {
+		padding: 1rem;
+	}
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 940px) {
+	.container {
+		width: 90%;
+	}
+	.pro-main {
+		padding: 0;
+	}
+	.descreption {
+		padding: 2rem 2rem;
+	}
+	#projects {
+		padding: 1rem;
+	}
+}
+
+@media only screen and (max-width: 1200px) and (min-width: 1001px) {
+	.descreption {
+		padding: 2rem 2rem;
+	}
+}
